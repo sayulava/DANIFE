@@ -1,0 +1,427 @@
+}
+
+.hero p {
+    max-width: 500px;
+}
+
+.boton {
+    display: inline-block;
+    padding: 12px 20px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 5px 5px 5px 0;
+}
+
+.principal {
+    background: var(--vino);
+    color: var(--blanco);
+}
+
+.principal:hover {
+    background: var(--vino-oscuro);
+}
+
+.hero .principal {
+    background: var(--blanco);
+    color: var(--vino);
+}
+
+.hero .principal:hover {
+    background: var(--rosa-claro);
+}
+
+.secundario {
+    background: var(--rosa-claro);
+    color: var(--vino);
+    border-color: var(--borde);
+}
+
+.beneficios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 28px 6%;
+    background: var(--blanco);
+    text-align: center;
+}
+
+.beneficios article {
+    padding: 10px;
+}
+
+.beneficios span {
+    font-size: 2rem;
+    color: var(--rosa);
+}
+
+.beneficios h2 {
+    font-size: 1.1rem;
+    margin: 4px;
+}
+
+.beneficios p {
+    color: var(--gris);
+    margin: 4px;
+}
+
+.seccion {
+    padding: 60px 7%;
+}
+
+.titulo-seccion {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 28px;
+}
+
+.titulo-seccion h2,
+.nosotros h2 {
+    color: var(--vino);
+    font-size: clamp(1.7rem, 3vw, 2.4rem);
+    margin: 5px 0;
+}
+
+.titulo-seccion > p:last-child {
+    color: var(--gris);
+}
+
+.herramientas {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 18px;
+    max-width: 900px;
+    margin: 0 auto 20px;
+}
+
+.campo-busqueda,
+.formulario div {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.campo-busqueda label,
+.formulario label {
+    font-weight: bold;
+    color: var(--vino);
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cdbcc4;
+    border-radius: 7px;
+    background: var(--blanco);
+    color: var(--texto);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: var(--vino);
+    outline: 2px solid var(--rosa);
+}
+
+.mensaje-resultados {
+    text-align: center;
+    color: var(--gris);
+}
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    background: var(--rosa-claro);
+}
+
+.tarjeta-contenido {
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.categoria {
+    background: var(--rosa-claro);
+    color: var(--vino);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 0.75rem;
+    text-transform: capitalize;
+}
+
+.tarjeta h3 {
+    margin: 10px 0 5px;
+    font-size: 1.05rem;
+}
+
+.descripcion {
+    color: var(--gris);
+    font-size: 0.9rem;
+    flex: 1;
+}
+
+.precio {
+    font-size: 1.15rem;
+    font-weight: bold;
+    color: var(--vino);
+}
+
+.tarjeta .boton {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.sin-resultados {
+    grid-column: 1 / -1;
+    padding: 30px;
+    text-align: center;
+    background: var(--blanco);
+    border-radius: 10px;
+}
+
+.nosotros {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+    align-items: center;
+    background: var(--rosa-claro);
+}
+
+.nosotros > p {
+    font-size: 1.05rem;
+}
+
+.contacto {
+    background: var(--blanco);
+}
+
+.formulario {
+    max-width: 600px;
+    margin: 0 auto;
+    display: grid;
+    gap: 18px;
+}
+
+.pie {
+    text-align: center;
+    background: var(--vino-oscuro);
+    color: var(--blanco);
+    padding: 30px 15px;
+}
+
+.logo-pie {
+    color: var(--blanco);
+}
+
+.pie p {
+    margin: 5px;
+    font-size: 0.9rem;
+}
+
+.modal[hidden] {
+    display: none !important;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 30;
+    padding: 20px;
+    background: rgba(30, 12, 22, 0.65);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-y: auto;
+}
+
+.modal-contenido {
+    background: var(--blanco);
+    padding: 28px;
+    border-radius: 14px;
+    width: 100%;
+    max-width: 560px;
+    max-height: 90vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.modal-contenido h2 {
+    color: var(--vino);
+    padding-right: 25px;
+}
+
+.cerrar {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    color: var(--vino);
+}
+
+.item-carrito {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 10px;
+    padding: 12px 0;
+    border-bottom: 1px solid var(--borde);
+}
+
+.controles-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.controles-cantidad button {
+    background: var(--rosa-claro);
+    border: 1px solid var(--borde);
+    color: var(--vino);
+    padding: 3px 10px;
+    border-radius: 5px;
+}
+
+.eliminar {
+    border: none;
+    background: none;
+    color: #a12343;
+    text-decoration: underline;
+}
+
+.total {
+    font-size: 1.2rem;
+    text-align: right;
+}
+
+.notificacion {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 50;
+    background: var(--vino-oscuro);
+    color: var(--blanco);
+    border-radius: 8px;
+    padding: 14px 20px;
+    max-width: calc(100% - 40px);
+    box-shadow: var(--sombra);
+}
+
+.notificacion:empty {
+    display: none;
+}
+
+@media (max-width: 950px) {
+    .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .encabezado {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 650px) {
+    .encabezado {
+        gap: 12px;
+        padding: 12px 4%;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .boton-menu {
+        display: block;
+        border: 1px solid var(--borde);
+        background: var(--blanco);
+        color: var(--vino);
+        border-radius: 7px;
+        padding: 8px 10px;
+    }
+
+    .menu {
+        display: none;
+        order: 4;
+        width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+    }
+
+    .menu.abierto {
+        display: flex;
+    }
+
+    .menu a {
+        padding: 10px;
+        border-top: 1px solid var(--borde);
+    }
+
+    .boton-carrito {
+        padding: 8px 10px;
+        font-size: 0.85rem;
+    }
+
+    .hero {
+        min-height: 340px;
+        padding: 35px 6%;
+        background-position: center;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+
+    .seccion {
+        padding: 42px 5%;
+    }
+
+    .herramientas,
+    .nosotros {
+        grid-template-columns: 1fr;
+    }
+
+    .productos {
+        grid-template-columns: 1fr;
+    }
+
+    .tarjeta img {
+        height: 250px;
+    }
+
+    .modal-contenido {
+        padding: 22px 17px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
