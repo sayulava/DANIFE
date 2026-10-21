@@ -1,0 +1,15 @@
+/DANIFE_JDBC_JAVA/target/
+/DANIFEWeb/target/
+# Archivos generados por Maven
+**/target/
+
+# Archivos de NetBeans
+**/nbproject/private/
+**/build/
+**/dist/
+
+# Configuraciones locales y secretos
+.env
+.env.*
+!.env.example
+
