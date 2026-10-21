@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pedido | DANIFE</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+</head>
+<body>
+    <header>
+        <div class="logo">DANIFE</div>
+        <nav>
+            <a href="index.html">Inicio</a>
+        </nav>
+    </header>
+
+    <main class="seccion">
+        <h2>Realizar pedido</h2>
+
+        <form action="pedido" method="post"
+              style="max-width:500px;margin:auto;">
+
+            <label for="cliente">Nombre del cliente:</label>
+            <input type="text" id="cliente" name="cliente"
+                   required maxlength="100"
+                   style="width:100%;padding:12px;margin:10px 0 20px;">
+
+            <label for="producto">Selecciona el producto:</label>
+            <select id="producto" name="producto" required
+                    style="width:100%;padding:12px;margin:10px 0 20px;">
+                <option value="">Selecciona una opción</option>
+                <option value="Vestido elegante">Vestido elegante</option>
+                <option value="Zapatos de dama">Zapatos de dama</option>
+                <option value="Bolso moderno">Bolso moderno</option>
+                <option value="Set de accesorios">Set de accesorios</option>
+            </select>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="number" id="cantidad" name="cantidad"
+                   min="1" max="100" value="1" required
+                   style="width:100%;padding:12px;margin:10px 0 20px;">
+
+            <button type="submit" class="boton">
+                Enviar pedido
+            </button>
+        </form>
+    </main>
+
+    <footer>
+        <p>DANIFE - Moda y estilo para dama</p>
+        <p>Proyecto académico 2026</p>
+    </footer>
+</body>
+</html>

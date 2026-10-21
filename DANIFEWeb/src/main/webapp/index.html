@@ -1,0 +1,156 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/estilos.css">
+    <title>DANIFE | Moda para dama</title>
+
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">DANIFE</div>
+
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#categorias">Categorías</a>
+            <a href="#productos">Productos</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" id="inicio">
+            <h1>Tu estilo, tu esencia</h1>
+            <p>Descubre la moda que te hace sentir única.</p>
+            <a class="boton" href="#productos">Ver colección</a>
+        </section>
+
+        <section class="seccion" id="categorias">
+            <h2>Nuestras categorías</h2>
+
+            <div class="categorias">
+                <div class="categoria">
+                    <div class="icono">👗</div>
+                    <h3>Ropa</h3>
+                    <p>Estilos para cada ocasión.</p>
+                </div>
+
+                <div class="categoria">
+                    <div class="icono">👠</div>
+                    <h3>Zapatos</h3>
+                    <p>Camina con estilo.</p>
+                </div>
+
+                <div class="categoria">
+                    <div class="icono">👜</div>
+                    <h3>Bolsos</h3>
+                    <p>El complemento perfecto.</p>
+                </div>
+
+                <div class="categoria">
+                    <div class="icono">💍</div>
+                    <h3>Accesorios</h3>
+                    <p>Detalles que enamoran.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" id="productos">
+            <h2>Productos destacados</h2>
+
+            <div class="productos">
+                <article class="producto">
+                    <div class="producto-imagen">
+    <img src="IMAGES/vestido.jpg" alt="Vestido elegante">
+</div>
+                    <h3>Vestido elegante</h3>
+                    <p class="precio">$89.900 COP</p>
+                    <button class="boton"
+                        onclick="alert('Producto de demostración: Vestido elegante')">
+                        Ver producto
+                    </button>
+                </article>
+
+                <article class="producto">
+                    <div class="producto-imagen">
+    <img src="IMAGES/zapatos.jpg" alt="Zapatos de dama">
+</div>
+                    <h3>Zapatos de dama</h3>
+                    <p class="precio">$119.900 COP</p>
+                    <button class="boton"
+                        onclick="alert('Producto de demostración: Zapatos de dama')">
+                        Ver producto
+                    </button>
+                </article>
+
+                <article class="producto">
+                    <div class="producto-imagen">
+    <img src="IMAGES/bolso.jpg" alt="Bolso moderno">
+</div>
+                    <h3>Bolso moderno</h3>
+                    <p class="precio">$79.900 COP</p>
+                    <button class="boton"
+                        onclick="alert('Producto de demostración: Bolso moderno')">
+                        Ver producto
+                    </button>
+                </article>
+
+                <article class="producto">
+                    <div class="producto-imagen">
+    <img src="IMAGES/Accesorio.jpg" alt="Set de Accesorio">
+</div>
+                    <h3>Set de accesorios</h3>
+                    <p class="precio">$39.900 COP</p>
+                    <button class="boton"
+                        onclick="alert('Producto de demostración: Set de accesorios')">
+                        Ver producto
+                    </button>
+                </article>
+            </div>
+        </section>
+                <section class="seccion" id="pedido">
+            <h2>Realiza tu pedido</h2>
+            <p>Completa los siguientes datos para solicitar tu producto.</p>
+
+            <form action="pedido" method="post" class="formulario-pedido">
+
+                <label for="cliente">Nombre del cliente:</label>
+                <input type="text" id="cliente" name="cliente"
+                       placeholder="Escribe tu nombre" required>
+
+                <label for="producto">Producto que deseas:</label>
+                <select id="producto" name="producto" required>
+                    <option value="">Selecciona un producto</option>
+                    <option value="Vestido elegante">Vestido elegante</option>
+                    <option value="Zapatos de dama">Zapatos de dama</option>
+                    <option value="Bolso moderno">Bolso moderno</option>
+                    <option value="Set de accesorios">Set de accesorios</option>
+                </select>
+
+                <label for="cantidad">Cantidad:</label>
+                <input type="number" id="cantidad" name="cantidad"
+                       min="1" max="100" value="1" required>
+
+                <button type="submit" class="boton">
+                    Enviar pedido
+                </button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <p><strong>DANIFE</strong> - Moda y estilo para dama</p>
+        <p>Tu belleza, tu esencia, tu estilo.</p>
+        <p>© 2026 DANIFE. Proyecto académico.</p>
+    </footer>
+
+</body>
+</html>
