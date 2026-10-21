@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -22,8 +21,15 @@
               style="max-width:500px;margin:auto;">
 
             <label for="cliente">Nombre del cliente:</label>
-            <input type="text" id="cliente" name="cliente"
-                   required maxlength="100"
+            <input type="text"
+                   id="cliente"
+                   name="cliente"
+                   required
+                   minlength="2"
+                   maxlength="100"
+                   pattern="[A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+([ '-][A-Za-zÁÉÍÓÚÜÑáéíóúüñ]+)*"
+                   title="Ingresa un nombre válido usando letras y separadores normales."
+                   autocomplete="name"
                    style="width:100%;padding:12px;margin:10px 0 20px;">
 
             <label for="producto">Selecciona el producto:</label>
@@ -37,8 +43,14 @@
             </select>
 
             <label for="cantidad">Cantidad:</label>
-            <input type="number" id="cantidad" name="cantidad"
-                   min="1" max="100" value="1" required
+            <input type="number"
+                   id="cantidad"
+                   name="cantidad"
+                   min="1"
+                   max="100"
+                   step="1"
+                   value="1"
+                   required
                    style="width:100%;padding:12px;margin:10px 0 20px;">
 
             <button type="submit" class="boton">

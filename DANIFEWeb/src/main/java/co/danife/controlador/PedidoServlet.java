@@ -32,10 +32,8 @@ public class PedidoServlet extends HttpServlet {
                          HttpServletResponse response)
             throws ServletException, IOException {
 
-        // Evitar interpretar la respuesta como otro tipo de contenido.
         response.setContentType("text/html;charset=UTF-8");
 
-        // Enviar al formulario existente de DANIFE.
         response.sendRedirect(request.getContextPath() + "/index.html");
     }
 
@@ -63,6 +61,34 @@ public class PedidoServlet extends HttpServlet {
             response.sendError(
                     HttpServletResponse.SC_BAD_REQUEST,
                     "Debes completar todos los datos del pedido."
+            );
+            return;
+        }
+
+        // Validar que el nombre del cliente sea válido.
+        // Permite letras Unicode, tildes, espacios, guiones y apóstrofes.
+        if (cliente.length() < 2
+                || cliente.length() > 100
+                || !cliente.matches(
+                    "^[\\p{L}]+(?:[ '-][\\p{L}]+)*$")) {
+
+            response.sendError(
+                    HttpServletResponse.SC_BAD_REQUEST,
+                    "El nombre del cliente debe contener letras "
+                    + "y tener entre 2 y 100 caracteres."
+            );
+            return;
+        }
+
+        // Validar que el producto sea una opción permitida.
+        if (!"Vestido elegante".equals(producto)
+                && !"Zapatos de dama".equals(producto)
+                && !"Bolso moderno".equals(producto)
+                && !"Set de accesorios".equals(producto)) {
+
+            response.sendError(
+                    HttpServletResponse.SC_BAD_REQUEST,
+                    "Debes seleccionar un producto válido."
             );
             return;
         }
@@ -134,11 +160,7 @@ public class PedidoServlet extends HttpServlet {
                 }
             }
 
-            /*
-             * Escapar los datos antes de enviarlos a la JSP.
-             * La página resultado.jsp debe imprimir estos atributos
-             * como texto HTML, no como código ejecutable.
-             */
+            // Preparar los datos para el resumen del pedido.
             request.setAttribute("cliente", escaparHTML(cliente));
             request.setAttribute("producto", escaparHTML(producto));
             request.setAttribute("cantidad", cantidad);
