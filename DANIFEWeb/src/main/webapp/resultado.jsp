@@ -7,9 +7,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resumen del pedido | DANIFE</title>
-    <link rel="stylesheet" href="CSS/estilos.css">
+
+    <link rel="stylesheet"
+          href="${pageContext.request.contextPath}/CSS/estilos.css">
 </head>
 <body>
+
     <header>
         <div class="logo">DANIFE</div>
     </header>
@@ -32,13 +35,20 @@
                     ? request.getAttribute("cantidad") : "" %></strong>
         </p>
 
-        <p>Gracias por comprar en DANIFE. Aquí puedes consultar el resumen de tu pedido.</p>
+        <p>
+            Gracias por comprar en DANIFE.
+            Aquí puedes consultar el resumen de tu pedido.
+        </p>
 
-        <a class="boton" href="index.html">Volver a la tienda</a>
+        <a class="boton"
+           href="${pageContext.request.contextPath}/index.html">
+            Volver a la tienda
+        </a>
     </main>
 
     <footer>
         <p>DANIFE - Moda y estilo para dama</p>
     </footer>
+
 </body>
 </html>
